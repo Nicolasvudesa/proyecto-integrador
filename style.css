@@ -2,6 +2,7 @@
 {
 box-sizing: border-box;
 }
+
 header{
     width: 10px;
     height: 10px;
@@ -11,6 +12,7 @@ header{
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+
 .container{
     display: flex;
     flex-direction: row;
@@ -20,9 +22,11 @@ header{
     justify-content: space-between;
     background-color:aquamarine;
 }
+
 .foto-home{
-    width: 10%;
+    width: 300px;
     background-color: aquamarine;
-    height: 10%;
+    height: 450px;
     flex-direction: row;
+    padding: 5%;
 }
