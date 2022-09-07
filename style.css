@@ -32,6 +32,7 @@ header{
     height: 340px;
     flex-direction: row;
     padding: 5%;
+    margin: 5px 20px 5px 20px;
 }
 
 h1{
