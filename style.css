@@ -1,4 +1,8 @@
-.header{
+*
+{
+box-sizing: border-box;
+}
+header{
     width: 10px;
     height: 10px;
     padding: 5%;
@@ -7,7 +11,18 @@
     flex-wrap: wrap;
     justify-content: flex-start;
 }
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap; 
+    width:max-content; 
+    height:max-content;
+    justify-content: space-between;
+    background-color:aquamarine;
+}
 .foto-home{
-    width: 50px;
-    height: 100px;
+    width: 10%;
+    background-color: aquamarine;
+    height: 10%;
+    flex-direction: row;
 }
