@@ -3,6 +3,10 @@
 box-sizing: border-box;
 }
 
+body{
+    background-color: black;
+}
+
 header{
     width: 10px;
     height: 10px;
@@ -19,13 +23,55 @@ header{
     flex-wrap:nowrap; 
     width:max-content; 
     height:max-content;
-    background-color:aquamarine;
+    background-color: black;
 }
 
 .foto-home{
-    width: 300px;
-    background-color: aquamarine;
-    height: 450px;
+    width: 240px;
+    background-color: rgb(66, 66, 66);
+    height: 340px;
     flex-direction: row;
     padding: 5%;
+}
+
+h1{
+    color: white;
+}
+
+h3{
+    text-align: center;
+    color: white;
+}
+
+h4{
+    text-align: center;
+    color: white;
+}
+
+.containHeader{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 200px;
+    background-color: aqua;
+}
+
+.logo{
+    margin-left: 5%;
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+    
+}
+
+.iBusqueda{
+    margin-right: 10%;
+    margin-top: 1px;
+}
+
+.buscar{
+    height: 5px;
+    width: 5px;
 }
