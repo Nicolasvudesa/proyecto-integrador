@@ -92,28 +92,20 @@ h4{
 .containDetalleP{
     display: flex;
     flex-wrap:wrap;
-    flex-direction: row;
+    flex-direction: column;
+    
 }
 .fotoDetalle{
     background-color: rgb(66, 66, 66);
-    display: flex;
-    justify-content: center;
-    padding:5px 5px 5px 5px;
     margin: 25px;
+    width: 20%;
 
 }
 .containPelis p{
     background-color:darkgray;
     color: black;
     padding: 1px;
-    font-size: larger;
-    font-weight: bolder;
-    margin left: 50px;
-}
-.containPelis{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    justify-content: flex-start;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 50px;
 }
