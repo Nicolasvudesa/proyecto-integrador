@@ -93,20 +93,22 @@ h4{
     display: flex;
     flex-wrap:wrap;
     flex-direction: row;
-    background-color: aqua;
 }
 .fotoDetalle{
     background-color: rgb(66, 66, 66);
-    padding: 2%;
-    left: 50px;
-    margin: 40px 15px 15px 15px;
+    display: flex;
+    justify-content: center;
+    padding:5px 5px 5px 5px;
+    margin: 25px;
+
 }
-.infoIndice{
+.containPelis p{
     background-color:darkgray;
     color: black;
     padding: 1px;
     font-size: larger;
     font-weight: bolder;
+    margin left: 50px;
 }
 .containPelis{
     display: flex;
