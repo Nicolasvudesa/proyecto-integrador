@@ -8,9 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"
+    rel="stylesheet"
+  />
     <title>Home</title>
 </head>
 <body> 
+    <header class="containHeader">
+        <div>
+            <img src="./fotos/WhatsApp Image 2022-09-09 at 20.33.19.jpeg" class="logo" />
+        </div>
+      <ul>
+        <li>Peliculas populares</li>
+        <li>Series populares</li>
+        <li>Peliculas mas valoradas</li>
+        <li>Generos</li>
+        <li>Favoritos</li>
+      </ul>
+      <form class="iBusqueda" action="./busqueda.html" method="get">
+        <input type="search" name="busqueda" placeholder="Buscar" value="" />
+        <button type="submit"><img src="./fotos/lupita.jpg" alt="" /></button>
+      </form>
+    </header>
 <nav class="container_padre">
     <h1>Peliculas populares</h1>
     <ul class="container" style="list-style: none;">
@@ -101,10 +121,16 @@
             <h3>Titanic</h3>
             <h4>1997</h4>
         </li>
-    </ul>
-        
+    </ul> 
 </nav>
-
+<footer class="containFooter">
+    <h1 class="tituloFooter">Peliseries</h1>
+    <div class="footerNombres">
+       <div class="nombres">Simon Diez Peña</div>
+       <div class="nombres">Nicolas Shakalis</div>
+       <div class="nombres">Nicolas Villalonga</div>
+    </div>
+</footer>
 
 </body>
 </html>
