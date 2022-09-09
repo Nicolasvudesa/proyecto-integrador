@@ -89,3 +89,29 @@ h4{
     align-self: flex-end;
     font-family: 'Cormorant Garamond', serif;
 }
+.containDetalleP{
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    background-color: aqua;
+}
+.fotoDetalle{
+    background-color: rgb(66, 66, 66);
+    padding: 2%;
+    left: 50px;
+    margin: 40px 15px 15px 15px;
+}
+.infoIndice{
+    background-color:darkgray;
+    color: black;
+    padding: 1px;
+    font-size: larger;
+    font-weight: bolder;
+}
+.containPelis{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: flex-start;
+}
