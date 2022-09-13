@@ -24,7 +24,9 @@ body{
     padding-left: 20px;
     margin: 30px 0px 45px 0px;
 }
-
+.foto-home:hover{
+    transform: scale(1.10);
+}
 .foto-home{
     width: 240px;
     background-color: rgb(66, 66, 66);
@@ -32,6 +34,7 @@ body{
     flex-direction: row;
     padding: 5%;
     margin: 5px 15px 5px 15px;
+    transition: 0.3s;
     border-radius: 10px;
 }
 
@@ -105,7 +108,10 @@ h4{
     font-size: 20px;
     padding-left: 4%;
 }
-
+.containHeader a{
+    text-decoration: none;
+    color: aliceblue;
+}
 .containFooter{
     display: flex;
     flex-direction: column;
@@ -127,15 +133,20 @@ h4{
 }
 
 .nombres{
-    font-family: 'Amatic SC';
-    width: 350px;
+    font-family: 'Raleway', sans-serif;
+    width: 200px;
     color:azure;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 400;
     display: flex;
     justify-content: center;
 }
-
+.containFooter p{
+    font-family: 'Raleway', sans-serif;
+    color: azure;
+    display: flex;
+    align-self: center;
+}
 .containDetalleP{
     display: flex;
     flex-wrap:wrap;
@@ -155,4 +166,18 @@ h4{
     font-size: 20px;
     font-weight: bold;
     margin-left: 50px;
+}
+iframe{
+    margin: 0px 500px;
+    display: flex;
+    justify-content:center ;
+}
+.trailerSeries iframe:hover{
+    transform: scale(3.0);
+}
+.trailerSeries iframe{
+    transition: 1s;
+}
+.containGeneros ul{
+    color:azure
 }
