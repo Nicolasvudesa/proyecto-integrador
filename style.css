@@ -19,10 +19,12 @@ body{
     background-color: black;
     margin: 15px 0px 35px 0px;
 }
+
 .container_padre{
     padding-left: 20px;
     margin: 30px 0px 45px 0px;
 }
+
 .foto-home{
     width: 240px;
     background-color: rgb(66, 66, 66);
@@ -30,6 +32,7 @@ body{
     flex-direction: row;
     padding: 5%;
     margin: 5px 15px 5px 15px;
+    border-radius: 10px;
 }
 
 h1{
@@ -59,6 +62,7 @@ h4{
     height: 100px;
     background-color:black;
 }
+
 .containHeader div{
     display: flex;
     align-items: center;
@@ -71,18 +75,22 @@ h4{
     height: 50%;
     padding-left: 90%;
 }
+
 .iBusqueda{
     display: flex;
     align-items: center;
     height: 100%;
     margin-right: 10%;
 }
+
 .iBusqueda input{
     height: 30px;
 }
+
 .iBusqueda button img{
     height: 22px;
 }
+
 .containHeader ul{
     width: 80%;
     display: flex;
@@ -97,23 +105,27 @@ h4{
     font-size: 20px;
     padding-left: 4%;
 }
+
 .containFooter{
     display: flex;
     flex-direction: column;
     margin: 20px 0px;
 }
+
 .tituloFooter{
     font-family: 'Amatic SC';
     text-align: center;
     font-weight: 700;
     padding: 10px 0px 10px 0px;
 }
+
 .footerNombres{
     display: flex;
     height: 40px;
     justify-content: center;
     align-items: center;
 }
+
 .nombres{
     font-family: 'Amatic SC';
     width: 350px;
@@ -123,18 +135,19 @@ h4{
     display: flex;
     justify-content: center;
 }
+
 .containDetalleP{
     display: flex;
     flex-wrap:wrap;
     flex-direction: column;
-
 }
+
 .fotoDetalle{
     background-color: rgb(66, 66, 66);
     margin: 25px;
     width: 20%;
-
 }
+
 .containPelis p{
     background-color:darkgray;
     color: black;
