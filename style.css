@@ -23,6 +23,9 @@ body{
     padding-left: 20px;
     margin: 30px 0px 45px 0px;
 }
+.foto-home:hover{
+    transform: scale(1.10);
+}
 .foto-home{
     width: 240px;
     background-color: rgb(66, 66, 66);
@@ -30,6 +33,7 @@ body{
     flex-direction: row;
     padding: 5%;
     margin: 5px 15px 5px 15px;
+    transition: 0.3s;
 }
 
 h1{
@@ -157,4 +161,13 @@ iframe{
     margin: 0px 500px;
     display: flex;
     justify-content:center ;
+}
+.trailerSeries iframe:hover{
+    transform: scale(3.0);
+}
+.trailerSeries iframe{
+    transition: 1s;
+}
+.containGeneros ul{
+    color:azure
 }
