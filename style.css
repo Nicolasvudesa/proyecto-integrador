@@ -119,13 +119,19 @@ h4{
     align-items: center;
 }
 .nombres{
-    font-family: 'Amatic SC';
-    width: 350px;
+    font-family: 'Raleway', sans-serif;
+    width: 200px;
     color:azure;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: 400;
     display: flex;
     justify-content: center;
+}
+.containFooter p{
+    font-family: 'Raleway', sans-serif;
+    color: azure;
+    display: flex;
+    align-self: center;
 }
 .containDetalleP{
     display: flex;
