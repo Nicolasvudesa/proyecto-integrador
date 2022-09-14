@@ -226,18 +226,20 @@ iframe{
     width:max-content; 
     height:max-content;
     background-color: black;
-    margin: 15px 0px 35px 180px;
+    margin: 15px 0px 35px 230px;
 }
 .container-fav li{
     padding: 0% 5%;
+}
+.titulosFavoritos{
+    margin-left: 3.5%;
+    margin-bottom: 1%;
 }
 
 .generospeliculas {
     color:azure;
     display: flex;
     flex-direction: column;
-    
-    
 }
 
 .generoseries {
