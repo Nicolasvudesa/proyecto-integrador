@@ -27,6 +27,7 @@ body{
 .foto-home:hover{
     transform: scale(1.10);
 }
+
 .foto-home{
     width: 240px;
     background-color: rgb(66, 66, 66);
@@ -108,10 +109,12 @@ h4{
     font-size: 20px;
     padding-left: 4%;
 }
+
 .containHeader a{
     text-decoration: none;
     color: aliceblue;
 }
+
 .containFooter{
     display: flex;
     flex-direction: column;
@@ -141,16 +144,12 @@ h4{
     display: flex;
     justify-content: center;
 }
+
 .containFooter p{
     font-family: 'Raleway', sans-serif;
     color: azure;
     display: flex;
     align-self: center;
-}
-.containDetalleP{
-    display: flex;
-    flex-wrap:wrap;
-    flex-direction: column;
 }
 
 .fotoDetalle{
@@ -167,17 +166,56 @@ h4{
     font-weight: bold;
     margin-left: 50px;
 }
+
 iframe{
     margin: 0px 500px;
     display: flex;
     justify-content:center ;
 }
+
 .trailerSeries iframe:hover{
     transform: scale(3.0);
 }
+
 .trailerSeries iframe{
     transition: 1s;
 }
+
 .containGeneros ul{
     color:azure
+}
+
+.detallepelis{
+    display: flex;
+    width: 100%;
+    padding: 10px 15px 0px 10px;
+}
+
+.detallepelis p{
+    color: azure;
+    font-weight: bold;
+    
+}
+
+.infoPelisTitulos{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 15%;
+}
+.infoPelisTitulos p{
+    color: burlywood;
+}
+.infoPelisDetalles{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.hola{
+    width: 30%;
+    height: 60%;
 }
