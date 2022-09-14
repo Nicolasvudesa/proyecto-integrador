@@ -37,6 +37,7 @@ body{
     margin: 5px 15px 5px 15px;
     transition: 0.3s;
     border-radius: 10px;
+    
 }
 
 h1{
@@ -219,4 +220,17 @@ iframe{
 .hola{
     width: 30%;
     height: 60%;
+}
+
+.container-fav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap; 
+    width:max-content; 
+    height:max-content;
+    background-color: black;
+    margin: 15px 0px 35px 180px;
+}
+.container-fav li{
+    padding: 0% 5%;
 }
