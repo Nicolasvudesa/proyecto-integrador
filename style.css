@@ -243,8 +243,7 @@ iframe{
 .generoseries {
     color:azure;
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;  
 }    
 
 .containerGeneros {
@@ -256,7 +255,14 @@ iframe{
 
 .containerGeneros ul{
     list-style: none;
+}
+
+.generoseries a{
     text-decoration: none;
+    color: azure;
+}
 
-
+.generospeliculas a{
+    text-decoration: none;
+    color: azure;
 }
