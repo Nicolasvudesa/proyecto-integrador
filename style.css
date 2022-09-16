@@ -12,23 +12,23 @@ body{
     display: flex;
     width:max-content; 
     height:max-content;
-    margin: 15px 0px 35px 0px;
+    margin: 2.1vh 0vw 4.9vh 0vw;
 }
 
 .container_padre{
-    margin: 30px 20px 20px 40px;
+    margin: 4.2vh 1.3vw 2.8vh 2.6vw;
 }
 .foto-home:hover{
     transform: scale(1.10);
 }
 
 .foto-home{
-    width: 240px;
+    width: 18vw;
+    height: 55vh;
     background-color: rgb(66, 66, 66);
-    height: 340px;
     flex-direction: row;
     padding: 5%;
-    margin: 5px 15px 5px 15px;
+    margin: 0.7vh 0.976vw 0.7vh 0.976vw;
     transition: 0.3s;
     border-radius: 10px;
 }
@@ -62,6 +62,7 @@ h4{
     justify-content: center;
 
 }
+
 .containHeader ul{
     width: 80%;
     display: flex;
@@ -78,7 +79,8 @@ h4{
 }
 
 .logo{
-    height: 50px;
+    height: 7vh;
+    width: 14vw;
     margin-left: 35%;
 }
 
@@ -90,36 +92,38 @@ h4{
 }
 
 .iBusqueda input{
-    height: 30px;
+    height: 4.4vh;
+    width: 10vw;
 }
 
 .iBusqueda button img{
-    height: 22px;
+    height: 3vh;
+    width: 1.5vw;
 }
 
 .containFooter{
     display: flex;
     flex-direction: column;
-    margin: 20px 0px;
+    margin: 2.8vh 0vw;
 }
 
 .tituloFooter{
     font-family: 'Amatic SC';
     text-align: center;
     font-weight: 700;
-    padding: 10px 0px 10px 0px;
+    padding: 1.4vh 0vw;
 }
 
 .footerNombres{
     display: flex;
-    height: 40px;
+    height: 5.6vh;
     justify-content: center;
     align-items: center;
 }
 
 .nombres{
     font-family: 'Raleway', sans-serif;
-    width: 200px;
+    width: 13vw;
     color:azure;
     font-size: 20px;
     font-weight: 400;
@@ -136,21 +140,21 @@ h4{
 
 .fotoDetalle{
     background-color: rgb(66, 66, 66);
-    margin: 25px;
+    margin: 3.05vh 3.05vw;
     width: 20%;
 }
 
 .containPelis p{
     background-color:darkgray;
     color: black;
-    padding: 1px;
+    padding: 0.12vh 0.12vw;
     font-size: 20px;
     font-weight: bold;
-    margin-left: 50px;
+    margin-left: 3.47vw;
 }
 
 iframe{
-    margin: 0px 500px;
+    margin: 0vh 34.72vw;
     display: flex;
     justify-content:center ;
 }
@@ -158,7 +162,7 @@ iframe{
 
 .detallepelis{
     display: flex;
-    padding: 10px 15px 0px 10px;
+    padding: 1.2vh 0.976vw 0vh 0.694vw;
 }
 
 .detallepelis p{
@@ -176,6 +180,7 @@ iframe{
 .infoPelisTitulos p{
     color: burlywood;
 }
+
 .infoPelisDetalles{
     display: flex;
     flex-wrap: nowrap;
@@ -234,10 +239,51 @@ iframe{
 .contenedorPublicidad{
     display: flex;
     justify-content: center;
-
 }
 
 .publicidad{
     width: 50%;
-    height: 130px;
+    height: 15.8vh;
+}
+
+.fotoDetalle{
+    width: 38vw;
+}
+
+@media (max-width: 500px){
+
+    .containHeader{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .containHeader ul{
+        flex-direction: column;
+    }
+    .iBusqueda input{
+        width: 40vw;
+        margin-left: 4vw
+    }
+    .logo{
+        margin-left: 4vw;
+        width: 30vw;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .foto-home{
+        width: 55vw;
+        height: 70vh;
+    }
+    .footerNombres{
+        justify-content: space-around;
+        margin-bottom: 5%;
+    }
+
+    .container-fav{
+        flex-direction: column;
+
+    }
+    .detallepelis{
+        flex-direction: column;
+    }
 }
