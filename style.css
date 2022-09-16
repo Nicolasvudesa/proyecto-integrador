@@ -246,6 +246,10 @@ iframe{
     height: 15.8vh;
 }
 
+.fotoDetalle{
+    width: 38vw;
+}
+
 @media (max-width: 500px){
 
     .containHeader{
@@ -267,7 +271,7 @@ iframe{
         flex-direction: column;
     }
     .foto-home{
-        width: 40vw;
+        width: 55vw;
         height: 70vh;
     }
     .footerNombres{
