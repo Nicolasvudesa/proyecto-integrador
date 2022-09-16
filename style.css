@@ -200,7 +200,7 @@ iframe{
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-around;
-    width: 10%;
+    width: 100%;
 }
 .infoPelisTitulos p{
     color: burlywood;
@@ -208,10 +208,8 @@ iframe{
 .infoPelisDetalles{
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 60%;
-    margin-top: 0.1%;
+    color:azure
+
 }
 
 .hola{
