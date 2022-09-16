@@ -245,3 +245,38 @@ iframe{
     width: 50%;
     height: 15.8vh;
 }
+
+@media (max-width: 500px){
+
+    .containHeader{
+        flex-direction: column;
+        align-items: flex-start;
+}
+    .containHeader ul{
+        flex-direction: column;
+}
+    .iBusqueda input{
+        width: 40vw;
+        margin-left: 4vw
+    }
+    .logo{
+        margin-left: 4vw;
+        width: 30vw;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .foto-home{
+        width: 40vw;
+        height: 70vh;
+    }
+    .footerNombres{
+        justify-content: space-around;
+        margin-bottom: 5%;
+    }
+    
+
+
+
+
+}
