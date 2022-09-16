@@ -251,6 +251,7 @@ iframe{
     width: 100%;
     justify-content: space-around;
     margin-top: 4%;
+    margin-bottom: 8%;
 }
 
 .containerGeneros ul{
@@ -265,4 +266,16 @@ iframe{
 .generospeliculas a{
     text-decoration: none;
     color: azure;
+}
+
+.contenedorPublicidad{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.publicidad{
+    width: 50%;
+    height: 130px;
 }
