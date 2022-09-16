@@ -155,13 +155,6 @@ iframe{
     justify-content:center ;
 }
 
-.trailerSeries iframe:hover{
-    transform: scale(3.0);
-}
-
-.trailerSeries iframe{
-    transition: 1s;
-}
 
 .detallepelis{
     display: flex;
@@ -190,11 +183,6 @@ iframe{
 
 }
 
-.hola{
-    width: 30%;
-    height: 60%;
-}
-
 .container-fav{
     display: flex;
     width:max-content; 
@@ -204,6 +192,7 @@ iframe{
 .container-fav li{
     padding: 0% 5%;
 }
+
 .titulosFavoritos{
     margin-left: 3.5%;
     margin-bottom: 1%;
