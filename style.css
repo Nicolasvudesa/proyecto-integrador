@@ -278,10 +278,11 @@ a{
     }
     .container{
         flex-direction: column;
+    
     }
     .foto-home{
         width: 55vw;
-        height: 70vh;
+        height: 60vh;
     }
     .footerNombres{
         justify-content: space-around;
