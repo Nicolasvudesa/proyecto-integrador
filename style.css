@@ -251,10 +251,10 @@ iframe{
     .containHeader{
         flex-direction: column;
         align-items: flex-start;
-}
+    }
     .containHeader ul{
         flex-direction: column;
-}
+    }
     .iBusqueda input{
         width: 40vw;
         margin-left: 4vw
@@ -274,9 +274,12 @@ iframe{
         justify-content: space-around;
         margin-bottom: 5%;
     }
-    
 
+    .container-fav{
+        flex-direction: column;
 
-
-
+    }
+    .detallepelis{
+        flex-direction: column;
+    }
 }
