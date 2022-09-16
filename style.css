@@ -16,8 +16,7 @@ body{
 }
 
 .container_padre{
-    padding-left: 20px;
-    margin: 30px 20px 20px 25px;
+    margin: 30px 20px 20px 40px;
 }
 .foto-home:hover{
     transform: scale(1.10);
