@@ -250,6 +250,15 @@ iframe{
     width: 38vw;
 }
 
+a{
+    color: azure;
+    text-decoration: none;
+}
+
+.botonFavoritos{
+    color: burlywood;
+}
+
 @media (max-width: 500px){
 
     .containHeader{
@@ -269,10 +278,11 @@ iframe{
     }
     .container{
         flex-direction: column;
+    
     }
     .foto-home{
         width: 55vw;
-        height: 70vh;
+        height: 60vh;
     }
     .footerNombres{
         justify-content: space-around;
