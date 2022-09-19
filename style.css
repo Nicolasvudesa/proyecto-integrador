@@ -18,6 +18,7 @@ body{
 .container_padre{
     margin: 4.2vh 1.3vw 2.8vh 2.6vw;
 }
+
 .foto-home:hover{
     transform: scale(1.10);
 }
@@ -108,9 +109,7 @@ h4{
 }
 
 .tituloFooter{
-    font-family: 'Amatic SC';
     text-align: center;
-    font-weight: 700;
     padding: 1.4vh 0vw;
 }
 
@@ -257,6 +256,11 @@ a{
 
 .botonFavoritos{
     color: burlywood;
+}
+
+.logoFooter{
+    height: 7vh;
+    width: 14vw;
 }
 
 @media (max-width: 500px){
