@@ -132,7 +132,6 @@ h4{
 .containFooter p{
     font-family: 'Raleway', sans-serif;
     color: azure;
-    display: flex;
     align-self: center;
 }
 
