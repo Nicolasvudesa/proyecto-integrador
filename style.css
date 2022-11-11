@@ -269,7 +269,7 @@ a{
     width:max-content; 
     height:max-content;
     margin: 2.1vh 0vw 4.9vh 0vw;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 @media (max-width: 500px){
