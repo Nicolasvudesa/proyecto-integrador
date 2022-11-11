@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
     let resultado = this.document.querySelector(".resultados")
     resultado.innerHTML += `Resultados para: ${busqueda}`
 
-    fetch(`https://api.themoviedb.org/3/search/movie?api_key=032a1cc5e170bb64ead032809385412a&language=en-US&query=${busqueda}&page=1`)
+    fetch(``)
 	    .then(function(response){
 	    return response.json();
 })
@@ -20,8 +20,6 @@ window.addEventListener("load", function(){
         // else{
         //     for(let i = 0, )
         // }
-
-
 })
 	    .catch(function(error){
 	    console.log('El error es: ' + error);
