@@ -17,6 +17,7 @@ body{
 
 .container_padre{
     margin: 4.2vh 1.3vw 2.8vh 2.6vw;
+    display: flex;
 }
 
 .foto-home:hover{
@@ -46,7 +47,10 @@ h3{
     text-align: center;
     color: azure;
 }
-
+p{
+    text-align: center;
+    color: azure;
+}
 h4{
     text-align: center;
     color: white;
@@ -191,7 +195,7 @@ iframe{
     height:max-content;
 }
 
-.container-fav li{
+.container-fav p{
     padding: 0% 5%;
 }
 
@@ -259,6 +263,13 @@ a{
 .logoFooter{
     height: 7vh;
     width: 14vw;
+}
+.container_busqueda{
+    display: flex;
+    width:max-content; 
+    height:max-content;
+    margin: 2.1vh 0vw 4.9vh 0vw;
+    flex-wrap: nowrap;
 }
 
 @media (max-width: 500px){

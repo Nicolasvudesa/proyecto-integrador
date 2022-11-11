@@ -13,5 +13,9 @@ window.addEventListener("load", function(){
             this.submit()
         }
     })
+
+    busqueda.addEventListener("focus", function(e){
+        alerta.style.display = 'none'
+    })
 })
 
