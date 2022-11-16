@@ -17,22 +17,18 @@ window.addEventListener("load", function(){
             contenedor_pelicula.innerHTML += ` <article class="infoPelisTitulos"> <p>Rating: <span class="infoPelisDetalles">  ${data.vote_average} </span></p>
             <p>Genero: <br> <a href="./detalle-generos.html">  ${data.genre_ids}</a></p>
             <p>Año de estreno:  <span class="infoPelisDetalles">  ${data.release_date}</span></p>
-            <p>Reparto:  <span class="infoPelisDetalles"></span></p>
             <p>Duracion:  <span class="infoPelisDetalles">${data.runtime} min</span></p>
             <p>Sinopsis: <span class="infoPelisDetalles">${data.overview}</span></p>
-            <p><a class = "botonFavoritos" href="./favoritos.html">Agregar a favoritos</a></p></article> `
-        })
-        .catch(function(error){
-	        console.log('El error es: ' + error);
-        })
-        fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=2a3601e42fea0b8cec36fb4c1999c023`)
+            <p><a class = "botonFavoritos" href="./favoritos.html">Agregar a favoritos</a></p></article>`
+
+            fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=2a3601e42fea0b8cec36fb4c1999c023`)
             .then(function(response){
                 return response.json();
             })
             .then(function(data){
                 console.log(data);
                 if(data.results.length == 0){
-                    resultadoBusqueda.innerHTML += `La pelicula no tiene provedores`
+                    contenedor.innerHTML += `La pelicula no tiene provedores`
                 }
                 else{
                     for(let i = 0; i < 5; i++){
@@ -43,5 +39,10 @@ window.addEventListener("load", function(){
                 })
             .catch(function(error){
                 console.log('El error es: ' + error);
+        }) 
         })
+        .catch(function(error){
+	        console.log('El error es: ' + error);
+        })
+
 })

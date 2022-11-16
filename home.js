@@ -5,18 +5,20 @@ window.addEventListener("load", function(){
             })
         .then(function(data){
             console.log(data);
-            let container = document.querySelector(".cointener_padre");
-            for(let i = 0; i < data.results.length; i++){
-                let path = data.results[i].poster_path
-                let img = `https://image.tmdb.org/t/p/w500/${path}`
-                let id = data.results[i].id
-                console.log(id)
-                container.innerHTML += `<article class = "container">
-                <a href="./detalle-pelis.html"> <img src="${img}" alt="Foto${data.results[i].original_title}" class="foto-home"></a>
+            let container_pad = document.querySelector(".cointener_padre");
+            if (data){ 
+                for(let i = 0; i < data.results.length; i++){
+                    let path = data.results[i].poster_path
+                    let img = `https://image.tmdb.org/t/p/w500/${path}`
+                    let id = data.results[i].id
+                    container_pad.innerHTML += `<article class = "container">
+                    <a href="./detalle-pelis.html"> <img src="${img}" alt="Foto${data.results[i].original_title}" class="foto-home"></a>
+                    <p> ${ data.results[i].original_title} </p>
                 </article>`
+                }
             }
             })
         .catch(function(error){
             console.log('El error es: ' + error);
             })
-        })
+})

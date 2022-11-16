@@ -15,10 +15,10 @@ window.addEventListener("load", function(){
             let resultadoBusqueda = document.querySelector(".resultados");
             let container = document.querySelector('.container_busqueda');
             if(data.results.length == 0){
-                resultadoBusqueda.innerHTML += `La búsqueda ${busqueda} no dio ningún resultado`
+                resultadoBusqueda.innerHTML = `La búsqueda ${busqueda} no dio ningún resultado`
             }
             else{
-                for(let i = 0; i < data.results.length; i++){
+                for(let i = 0; i < 8; i++){
                     let path = data.results[i].poster_path
                     let img = `https://image.tmdb.org/t/p/w500/${path}`
                     let id = data.results[i].id
@@ -42,18 +42,19 @@ window.addEventListener("load", function(){
 	    .then(function(data){
             console.log(data);
             let resultadoBusqueda = document.querySelector(".resultados");
+            let series = document.querySelector(".resultados_series")
             let container_series = document.querySelector('.container_busqueda_series');
             if(data.results.length == 0){
-                resultadoBusqueda.innerHTML += `La búsqueda ${busqueda} no dio ningún resultado`
+                series.innerHTML = ""
             }
             else{
-                for(let i = 0; i < data.results.length; i++){
+                for(let i = 0; i < 8; i++){
                     let path = data.results[i].poster_path
                     let img = `https://image.tmdb.org/t/p/w500/${path}`
                     let id = data.results[i].id
                     console.log(id)
                     container_series.innerHTML += `<article class = "pelicula_buscada">
-                    <a href="./detalle-pelis.html?movie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].original_title} " class="foto-home"></a>
+                    <a href="./detalle-pelis.html?movie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].original_title}" class="foto-home"></a>
                     <p class = "title">${data.results[i].original_title}</p>
                     <p>${data.results[i].release_date}</p>
                 </article>`
