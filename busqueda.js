@@ -23,7 +23,7 @@ window.addEventListener("load", function(){
                     let img = `https://image.tmdb.org/t/p/w500/${path}`
                     container.innerHTML += `<article class = "pelicula_buscada">
                     <a href=".//detalle-pelis.html"> <img src="${img}" alt="Foto${data.results[i].original_title} " class="foto-home"></a>
-                    <p>${data.results[i].original_title}</p>
+                    <p class = "title">${data.results[i].original_title}</p>
                     <p>${data.results[i].release_date}</p>
                 </article>`
                 }
