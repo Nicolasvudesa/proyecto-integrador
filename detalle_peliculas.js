@@ -1,28 +1,47 @@
 window.addEventListener("load", function(){
     let query1 = location.search
     let query2 = new URLSearchParams(query1)
-    let pelicula = query2.get(".title")
-
-    let section = document.querySelector(".detallepelis")
-    let entrar = document.querySelector(".foto-home")
-    entrar.addEventListener("click", function(){
-        fetch(`https://api.themoviedb.org/3/search/movie?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US&page=1&include_adult=false&query=${pelicula}`)
+    console.log(query2)
+    let id = query2.get("movie_id")
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US`)
         .then(function(response){
 	        return response.json();
         })
 	    .then(function(data){
             console.log(data);
+            let path = data.poster_path
+            let contenedor_pelicula = document.querySelector(".detallepelis")
+            let img = `https://image.tmdb.org/t/p/w500/${path}`
             let contenedor = document.querySelector(".infoPelisTitulos")
-            contenedor.innerHTML += `<p>Rating:<span class="infoPelisDetalles">${data.results.vote_average} </span></p>
-            <p>Genero: <br><a href="./detalle-generos.html">${data.results.genre_ids}</a></p>
-            <p>Año de estreno:<span class="infoPelisDetalles">${data.results.release_date}</span></p>
-            <p>Reparto:<span class="infoPelisDetalles"></span></p>
-            <p>Duracion:<span class="infoPelisDetalles"></span></p>
-            <p>Sinopsis:<span class="infoPelisDetalles">${data.results.overview}</span></p>
-            <p><a class = "botonFavoritos" href="./favoritos.html">Agregar a favoritos</a></p>`
+            contenedor_pelicula.innerHTML += `<img src="${img}" class="fotoDetalle"/>`
+            contenedor_pelicula.innerHTML += ` <article class="infoPelisTitulos"> <p>Rating: <span class="infoPelisDetalles">  ${data.vote_average} </span></p>
+            <p>Genero: <br> <a href="./detalle-generos.html">  ${data.genre_ids}</a></p>
+            <p>Año de estreno:  <span class="infoPelisDetalles">  ${data.release_date}</span></p>
+            <p>Reparto:  <span class="infoPelisDetalles"></span></p>
+            <p>Duracion:  <span class="infoPelisDetalles">${data.runtime} min</span></p>
+            <p>Sinopsis: <span class="infoPelisDetalles">${data.overview}</span></p>
+            <p><a class = "botonFavoritos" href="./favoritos.html">Agregar a favoritos</a></p></article> `
         })
         .catch(function(error){
 	        console.log('El error es: ' + error);
         })
-    })
+        fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=2a3601e42fea0b8cec36fb4c1999c023`)
+            .then(function(response){
+                return response.json();
+            })
+            .then(function(data){
+                console.log(data);
+                if(data.results.length == 0){
+                    resultadoBusqueda.innerHTML += `La pelicula no tiene provedores`
+                }
+                else{
+                    for(let i = 0; i < 5; i++){
+                    let contenedor = document.querySelector(".infoPelisTitulos")
+                    contenedor.innerHTML += `<p>Donde mirar:<span class="infoPelisDetalles">${data.results[i].provider_name}</span></p>`
+                }
+                }
+                })
+            .catch(function(error){
+                console.log('El error es: ' + error);
+        })
 })

@@ -169,7 +169,6 @@ iframe{
 .detallepelis p{
     color: azure;
     font-weight: bold;
-    
 }
 
 .infoPelisTitulos{
@@ -179,13 +178,16 @@ iframe{
 }
 
 .infoPelisTitulos p{
+    display: flex;
     color: burlywood;
 }
 
 .infoPelisDetalles{
     display: flex;
     flex-wrap: nowrap;
-    color:azure
+    color:azure;
+    justify-content: space-between;
+    padding: 0, 20vw;
 
 }
 
