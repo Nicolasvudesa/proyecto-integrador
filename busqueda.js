@@ -54,7 +54,7 @@ window.addEventListener("load", function(){
                     let id = data.results[i].id
                     console.log(id)
                     container_series.innerHTML += `<article class = "pelicula_buscada">
-                    <a href="./detalle-pelis.html?movie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].original_title}" class="foto-home"></a>
+                    <a href="./detalle-series.html?serie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].original_title}" class="foto-home"></a>
                     <p class = "title">${data.results[i].original_title}</p>
                     <p>${data.results[i].release_date}</p>
                 </article>`
