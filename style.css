@@ -7,9 +7,6 @@ body{
     background-color: black;
     font-family: 'Poppins', sans-serif;
 }
-.container_general{
-    display: flex;
-}
 .container{
     display: flex;
     flex-direction: column;
@@ -19,8 +16,24 @@ body{
     align-items: center;
 }
 
+.container_favoritos{
+    display: flex;
+}
+.mostrar_recomendaciones{
+    display: flex;
+}
+.mostrar_recomendaciones_series{
+    display: flex;
+}
 .container_padre{
     margin: 2.2vh 1.3vw 2.8vh 0;
+    display: flex;
+    flex-direction: column;
+}
+.container_padre h3{
+    text-align: left;
+}
+.container_padre div{
     display: flex;
 }
 
