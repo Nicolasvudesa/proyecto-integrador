@@ -40,6 +40,14 @@ body{
 .foto-home:hover{
     transform: scale(1.10);
 }
+.padre_detail_generos{
+    display: flex;
+    flex-direction: column;
+}
+.detail_generos{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .foto-home{
     width: 18vw;
