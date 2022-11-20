@@ -1,14 +1,16 @@
 window.addEventListener("load", function(){
+    //Capturamos la querystring
     let query1 = location.search
-    let query2 = new URLSearchParams(query1)
-    let busqueda = query2.get("busqueda")
+    let query2 = new URLSearchParams(query1)//me convierte la cadena de texto a objeto literal
+    let busqueda = query2.get("busqueda") 
 
+   
     let resultado = this.document.querySelector(".resultados")
     resultado.innerHTML += `Resultados para: ${busqueda}`
 
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US&page=1&include_adult=false&query=${busqueda}`)
 	    .then(function(response){
-	        return response.json();
+	        return response.json();     
         })
 	    .then(function(data){
             console.log(data);
