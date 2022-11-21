@@ -22,8 +22,9 @@ window.addEventListener("load", function () {
             <p class="generos">Genero: </p>
             <p>Año de estreno:  <span class="infoPelisDetalles">  ${data.first_air_date}</span></p>
             <p>Temporadas:<span class="infoPelisDetalles">${data.number_of_seasons} </span></p>
-            <p>Sinopsis: <span class="infoPelisDetalles">${data.overview}</span></p>
-            <p class="boton_recomendaciones">Ver recomendaciones</p>
+            <p class="sinopsis">Sinopsis: </p>
+            <span class="infoPelisDetalles">${data.overview}</span>
+            <p class=" boton_favs boton_recomendaciones">Ver recomendaciones</p>
             <p class="boton_favs boton_favoritos_serie">Agregar a favoritos</p>
             <p class="boton_favs borrar_serie">Eliminar de favoritos</p></article>`;
       let contenedor_generos = document.querySelector(".generos");

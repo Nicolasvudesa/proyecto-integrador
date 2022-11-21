@@ -22,10 +22,11 @@ window.addEventListener("load", function () {
         contenedor_pelicula.innerHTML += ` <article class="infoPelisTitulos"> <p>Rating: <span class="infoPelisDetalles">${data.vote_average} </span></p>
               <p class = "generos_nombre">Genero:</p>
               <p>Año de estreno:  <span class="infoPelisDetalles">${data.release_date}</span></p>
-              <p>Duracion:  <span class="infoPelisDetalles">${data.runtime} min</span></p>6
-              <p>Sinopsis: <span class="infoPelisDetalles">${data.overview}</span></p>
+              <p>Duracion:  <span class="infoPelisDetalles">${data.runtime} min</span></p>
+              <p class="sinopsis">Sinopsis:</p>
+              <span class="infoPelisDetalles">${data.overview}</span>
               <p class="proveedores"> Donde mirar:</p>
-              <p class="boton_recomendaciones">Ver recomendaciones</p>
+              <p class="boton_favs boton_recomendaciones">Ver recomendaciones</p>
               <p class="boton_favs boton_favoritos">Agregar a favoritos</p>
               <p class="boton_favs borrar">Eliminar de favoritos</p></article>`;
         

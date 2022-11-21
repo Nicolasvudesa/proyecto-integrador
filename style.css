@@ -187,8 +187,7 @@ iframe{
 }
 
 .trailer{
-    display: flex;
-    justify-content:flex-start;    
+       
 }
 
 
@@ -343,6 +342,9 @@ a{
 }
 .boton_favs:hover{
     transform: scale(1.05)
+}
+.sinopsis{
+    margin-bottom: 0;
 }
 @media (max-width: 500px){
 
