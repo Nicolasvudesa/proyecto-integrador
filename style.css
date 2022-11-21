@@ -187,7 +187,8 @@ iframe{
 }
 
 .trailer{
-    justify-content: left;    
+    display: flex;
+    justify-content:flex-start;    
 }
 
 
@@ -303,6 +304,13 @@ a{
 .container_padre_busqueda{
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+.container_padre_busqueda h3{
+    text-align: left;
+    margin-left: 2vw;
+
 }
 .container_busqueda{
     display: flex;
