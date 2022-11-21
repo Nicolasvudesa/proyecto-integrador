@@ -186,6 +186,10 @@ iframe{
     justify-content:center ;
 }
 
+.trailer{
+    justify-content: left;    
+}
+
 
 .detallepelis{
     display: flex;
