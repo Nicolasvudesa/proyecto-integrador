@@ -26,8 +26,8 @@ window.addEventListener("load", function () {
               <p>Sinopsis: <span class="infoPelisDetalles">${data.overview}</span></p>
               <p class="proveedores"> Donde mirar:</p>
               <p class="boton_recomendaciones">Ver recomendaciones</p>
-              <p class="boton_favoritos">Agregar a favoritos</p>
-              <button class="borrar">Borrar</button></article>`;
+              <p class="boton_favs boton_favoritos">Agregar a favoritos</p>
+              <p class="boton_favs borrar">Eliminar de favoritos</p></article>`;
         
         
               let contenedor_generos = document.querySelector(".generos_nombre");

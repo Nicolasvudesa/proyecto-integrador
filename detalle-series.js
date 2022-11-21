@@ -24,8 +24,8 @@ window.addEventListener("load", function () {
             <p>Temporadas:<span class="infoPelisDetalles">${data.number_of_seasons} </span></p>
             <p>Sinopsis: <span class="infoPelisDetalles">${data.overview}</span></p>
             <p class="boton_recomendaciones">Ver recomendaciones</p>
-            <p class="boton_favoritos_serie">Agregar a favoritos</p>
-            <button class="borrar_serie">Borrar</button></article>`;
+            <p class="boton_favs boton_favoritos_serie">Agregar a favoritos</p>
+            <p class="boton_favs borrar_serie">Eliminar de favoritos</p></article>`;
       let contenedor_generos = document.querySelector(".generos");
       for (let i = 0; i < data.genres.length; i++) {
         let genre_id = data.genres[i].id;
