@@ -96,6 +96,23 @@ window.addEventListener("load", function () {
     .catch(function (error) {
       console.log("El error es: " + error);
     });
+    let urlVideo = `https://api.themoviedb.org/3/tv/${id_serie}/videos?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US`
+    fetch(urlVideo)
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (datavideo) {
+  console.log(datavideo);
+  let trailer = datavideo.results;
+      let contenedorTrailer = document.querySelector(".trailer");
+      let trailerLista = "";
+  
+        for (let i = 0; i < datavideo.results.length; i++) {
+          if(trailer[i].type == "Trailer"){
+          trailerLista +=  `<iframe width="560" height="315" src="https://www.youtube.com/embed/${datavideo.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        } }
+        contenedorTrailer.innerHTML = trailerLista
+      })
 });
 
 // fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=2a3601e42fea0b8cec36fb4c1999c023`)

@@ -122,6 +122,8 @@ let trailer = datavideo.results;
       contenedorTrailer.innerHTML = trailerLista
 
     })
+
+    
   //&& trailer[i].name == "Official Trailer" 
 
    
