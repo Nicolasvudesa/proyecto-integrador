@@ -20,11 +20,12 @@ body{
     display: flex;
 }
 .mostrar_recomendaciones{
-    display: flex;
+    display: flex; 
 }
 .mostrar_recomendaciones_series{
-    display: flex;
+    display: flex; 
 }
+
 .container_padre{
     margin: 2.2vh 1.3vw 2.8vh 0;
     display: flex;
@@ -186,10 +187,19 @@ iframe{
     justify-content:center ;
 }
 
-.trailer{
-       
+.container_trailer{
+   display: flex; 
+   flex-direction: column;
+   align-items: flex-start;
 }
-
+.trailer{
+    display: flex;
+    justify-content: flex-start;
+}
+.video_trailer{
+    display: flex;
+    justify-content: flex-start;
+}
 
 .detallepelis{
     display: flex;

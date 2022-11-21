@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
             <p>Temporadas:<span class="infoPelisDetalles">${data.number_of_seasons} </span></p>
             <p class="sinopsis">Sinopsis: </p>
             <span class="infoPelisDetalles">${data.overview}</span>
-            <p class=" boton_favs boton_recomendaciones">Ver recomendaciones</p>
+            <a href="#recomendaciones"><p class=" boton_favs boton_recomendaciones">Ver recomendaciones</p></a>
             <p class="boton_favs boton_favoritos_serie">Agregar a favoritos</p>
             <p class="boton_favs borrar_serie">Eliminar de favoritos</p></article>`;
       let contenedor_generos = document.querySelector(".generos");
@@ -106,13 +106,13 @@ window.addEventListener("load", function () {
   console.log(datavideo);
   let trailer = datavideo.results;
       let contenedorTrailer = document.querySelector(".trailer");
-      let trailerLista = "";
   
         for (let i = 0; i < datavideo.results.length; i++) {
           if(trailer[i].type == "Trailer"){
-          trailerLista +=  `<iframe width="560" height="315" src="https://www.youtube.com/embed/${datavideo.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-        } }
-        contenedorTrailer.innerHTML = trailerLista
+          contenedorTrailer.innerHTML =  `<iframe width="560" height="315" src="https://www.youtube.com/embed/${datavideo.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        } 
+      }
+
       })
 });
 

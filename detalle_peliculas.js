@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
               <p class="sinopsis">Sinopsis:</p>
               <span class="infoPelisDetalles">${data.overview}</span>
               <p class="proveedores"> Donde mirar:</p>
-              <p class="boton_favs boton_recomendaciones">Ver recomendaciones</p>
+              <a href="#recomendaciones"><p class="boton_favs boton_recomendaciones">Ver recomendaciones</p></a>
               <p class="boton_favs boton_favoritos">Agregar a favoritos</p>
               <p class="boton_favs borrar">Eliminar de favoritos</p></article>`;
         
@@ -86,6 +86,7 @@ window.addEventListener("load", function () {
                 let path = data.results[i].poster_path;
                 let id = data.results[i].id
                 let img = `https://image.tmdb.org/t/p/w500/${path}`;
+                let texto = 
                 mostrar.innerHTML += `<article class="container">
                 <a href="./detalle-pelis.html?movie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].title}" class="foto-home"></a>
                 <p> ${data.results[i].title} </p>
@@ -114,17 +115,15 @@ window.addEventListener("load", function () {
 console.log(datavideo);
 let trailer = datavideo.results;
     let contenedorTrailer = document.querySelector(".trailer");
-    let trailerLista = "";
 
       for (let i = 0; i < datavideo.results.length; i++) {
         if(trailer[i].type == "Trailer"){
-        trailerLista +=  `<iframe width="560" height="315" src="https://www.youtube.com/embed/${datavideo.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-      } }
-      contenedorTrailer.innerHTML = trailerLista
-
+        contenedorTrailer.innerHTML =  `<iframe class="video_trailer" width="560" height="315" src="https://www.youtube.com/embed/${datavideo.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+      } 
+    }
     })
 
-    
+
   //&& trailer[i].name == "Official Trailer" 
 
    
