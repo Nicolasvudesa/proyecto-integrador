@@ -369,6 +369,12 @@ a{
 .sinopsis{
     margin-bottom: 0;
 }
+.logo_prov{
+    height: 9vh;
+    width: 4.5vw;
+    border-radius: 2vh;
+    padding: 0.25vw;
+}
 @media (max-width: 500px){
 
     .containHeader{

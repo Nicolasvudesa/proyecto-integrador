@@ -42,7 +42,7 @@ window.addEventListener("load", function(){
                 let img = `https://image.tmdb.org/t/p/w500/${path}`
                 let id = data.results[i].id
                 container_genero.innerHTML += `<article class = "container">
-                <a href="./detalle-series.html?serie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].original_name}" class="foto-home"></a>
+                <a href="./detalle-series.html?_id=${id}"> <img src="${img}" alt="Foto${data.results[i].original_name}" class="foto-home"></a>
                 <p> ${ data.results[i].original_name} </p>
             </article>`
             }

@@ -24,6 +24,7 @@ window.addEventListener("load", function () {
             <p>Temporadas:<span class="infoPelisDetalles">${data.number_of_seasons} </span></p>
             <p class="sinopsis">Sinopsis: </p>
             <span class="infoPelisDetalles">${data.overview}</span>
+            <div class="proveedores"> <p>Donde mirar:</p></div>
             <a href="#recomendaciones"><p class=" boton_favs boton_recomendaciones">Ver recomendaciones</p></a>
             <p class="boton_favs boton_favoritos_serie">Agregar a favoritos</p>
             <p class="boton_favs borrar_serie">Eliminar de favoritos</p></article>`;
@@ -97,6 +98,46 @@ window.addEventListener("load", function () {
     .catch(function (error) {
       console.log("El error es: " + error);
     });
+
+
+    fetch(`https://api.themoviedb.org/3/tv/${id_serie}/watch/providers?api_key=2a3601e42fea0b8cec36fb4c1999c023`)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(data){
+      console.log(data)
+        let proveedor = document.querySelector(".proveedores");
+        let dataProvs = data.results
+        let keys = Object.keys(dataProvs)
+        let keys_pais = Object.keys(data.results.US)
+        if((keys.includes("US"))){
+        console.log("paso1")
+        let keys_pais = Object.keys(data.results.US)
+        if(keys_pais.includes("flatrate")){
+          for(let i = 0; i < data.results.US.flatrate.length; i++){
+            console.log("hola") 
+            let logo_path = data.results.US.flatrate[i].logo_path; 
+            let img = `https://image.tmdb.org/t/p/w500/${logo_path}`
+            proveedor.innerHTML +=  `<img class="logo_prov" src="${img}" alt='${data.results.US.flatrate[i].provider_name}'/>`
+      }
+        }
+        else{
+          console.log("hola_else")
+          proveedor.innerHTML += `<span class="infoPelisDetalles">La pelicula no tiene provedores en tu pais</span>`
+
+        }
+        }
+        else{
+          console.log("hola_else")
+          proveedor.innerHTML += `<span class="infoPelisDetalles">La pelicula no tiene provedores en tu pais</span>`
+
+        }
+        })
+    .catch(function(error){
+        console.log('El error es: ' + error);
+})
+//////////////////////
+
     let urlVideo = `https://api.themoviedb.org/3/tv/${id_serie}/videos?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US`
     fetch(urlVideo)
       .then(function (response) {
@@ -115,23 +156,3 @@ window.addEventListener("load", function () {
 
       })
 });
-
-// fetch(`https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=2a3601e42fea0b8cec36fb4c1999c023`)
-//     .then(function(response){
-//         return response.json();
-//     })
-//     .then(function(data){
-//         console.log(data);
-//         if(data.results.length == 0){
-//             resultadoBusqueda.innerHTML += `La pelicula no tiene provedores`
-//         }
-//         else{
-//             for(let i = 0; i < 5; i++){
-//             let contenedor = document.querySelector(".infoPelisTitulos")
-//             contenedor.innerHTML += `<p>Donde mirar:<span class="infoPelisDetalles">${data.results[i].provider_name}</span></p>`
-//         }
-//         }
-//         })
-//     .catch(function(error){
-//         console.log('El error es: ' + error);
-// })
