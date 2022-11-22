@@ -17,7 +17,13 @@ window.addEventListener("load", function(){
             let container = document.querySelector('.container_busqueda');
             if(data.results.length == 0){
                 resultadoBusqueda.innerText = `La búsqueda ${busqueda} no dio ningún resultado`
+                let boton_busqueda = document.querySelector(".boton_busqueda")
+                boton_busqueda.innerHTML = ""
+                let boton_borrar = document.querySelector(".boton_busqueda")
+                boton_borrar.remove()
+
             }
+
             else{
                 for(let i = 0; i < 4; i++){
                     let path = data.results[i].poster_path
@@ -71,6 +77,7 @@ window.addEventListener("load", function(){
 	        console.log('El error es: ' + error);
         })
 
+
         fetch(`https://api.themoviedb.org/3/search/tv?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US&page=1&include_adult=false&query=${busqueda}`)
 	    .then(function(response){
 	        return response.json();
@@ -81,6 +88,8 @@ window.addEventListener("load", function(){
             let container_series = document.querySelector('.container_busqueda_series');
             if(data.results.length == 0){
                 series.innerHTML = ""
+                let boton_borrar = document.querySelector(".boton_busqueda")
+                boton_borrar.remove()
             }
             else{
                 for(let i = 0; i < 4; i++){
@@ -107,7 +116,7 @@ window.addEventListener("load", function(){
                 .then(function(data){
                     console.log(data);
                     if(data.results.length == 0){
-                        series.innerHTML = ``
+                        series.innerHTML = ""
                     }
                     else{
                         for(let i = 0; i < 4; i ++){
