@@ -191,14 +191,18 @@ iframe{
    display: flex; 
    flex-direction: column;
    align-items: flex-start;
+   margin-left: 4%;
+   
 }
 .trailer{
     display: flex;
     justify-content: flex-start;
+    
+    
 }
 .video_trailer{
-    display: flex;
-    justify-content: flex-start;
+    margin: auto;
+    
 }
 
 .detallepelis{
@@ -254,15 +258,15 @@ iframe{
     color:azure;
     display: flex;
     flex-direction: column;
-}
-
-.generoseries {
+} 
+.generoseries{
     color:azure;
     display: flex;
     flex-direction: column;  
 }    
 
-.containerGeneros {
+
+.containerGeneros{
     display: flex;
     justify-content: space-around;
     margin-top: 4%;
@@ -276,11 +280,20 @@ iframe{
 .generoseries a{
     text-decoration: none;
     color: azure;
+    transition: 0.3s;
 }
-
+.generoseries a :hover{
+    transform: scale(1.1);
+}
 .generospeliculas a{
     text-decoration: none;
     color: azure;
+    transition: 0.3s;
+
+}
+.generospeliculas a :hover{
+    transform: scale(1.1);
+
 }
 
 .contenedorPublicidad{
