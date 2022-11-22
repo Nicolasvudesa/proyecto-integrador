@@ -150,11 +150,10 @@ window.addEventListener("load", function () {
 console.log(datavideo);
 let trailer = datavideo.results;
     let contenedorTrailer = document.querySelector(".trailer");
-
       for (let i = 0; i < datavideo.results.length; i++) {
         if(trailer[i].type == "Trailer"){
         contenedorTrailer.innerHTML =  `<iframe class="video_trailer" width="560" height="315" src="https://www.youtube.com/embed/${datavideo.results[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-      } 
+      }
     }
     })
 
