@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
         let genre_name = data.genres[i].name;
         console.log(genre_id);
         console.log(genre_name);
-        contenedor_generos.innerHTML += `<a href="./detalle-generos.html?genre_id=${genre_id}"><span class="infoPelisDetalles">${genre_name}</span></a>`;
+        contenedor_generos.innerHTML += `<a href="./detalle-generos.html?genre_id=${genre_id}&genre_name=${genre_name}&type=serie"><span class="infoPelisDetalles">${genre_name}</span></a>`;
       }
 
       let agregar_favorito = document.querySelector(".boton_favoritos_serie");
