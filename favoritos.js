@@ -26,7 +26,7 @@ window.addEventListener("load", function () {
         }
 
   let favoritas_string_serie = localStorage.getItem("favoritas_series");
-  let favoritas_serie = favoritas_string_serie.split(",");
+  let favoritas_serie = favoritas_string_serie.split(",");//["58", "89"]---->[58, 89]
   console.log(favoritas_serie)
   for (let i = 0; i < favoritas_serie.length; i++) {
     let id_serie = Number(favoritas_serie[i]);

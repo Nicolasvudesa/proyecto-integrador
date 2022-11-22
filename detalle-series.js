@@ -39,7 +39,6 @@ window.addEventListener("load", function () {
 
       let agregar_favorito = document.querySelector(".boton_favoritos_serie");
       agregar_favorito.addEventListener("click", function () {
-        console.log("click");
         let valueLocalStorage = localStorage.getItem("favoritas_series");
         let newValue = id_serie;
         let newLocalStorage = valueLocalStorage + "," + newValue;
@@ -54,10 +53,8 @@ window.addEventListener("load", function () {
       console.log(favoritas_string_series)
       let favoritas_serie = favoritas_string_series.split(",");
       borrar_fav_serie.addEventListener("click", function () {
-        console.log("test");
         let array_nuevo_favoritas_serie = [];
         for (let i = 0; i < favoritas_serie.length; i++) {
-          console.log(data.id)
           if (Number(favoritas_serie[i]) !== data.id) {
             array_nuevo_favoritas_serie.push(favoritas_serie[i]);
           } else {
