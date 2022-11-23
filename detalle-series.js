@@ -106,9 +106,7 @@ window.addEventListener("load", function () {
         let proveedor = document.querySelector(".proveedores");
         let dataProvs = data.results
         let keys = Object.keys(dataProvs)
-        let keys_pais = Object.keys(data.results.US)
         if((keys.includes("US"))){
-        console.log("paso1")
         let keys_pais = Object.keys(data.results.US)
         if(keys_pais.includes("flatrate")){
           for(let i = 0; i < data.results.US.flatrate.length; i++){
@@ -120,13 +118,13 @@ window.addEventListener("load", function () {
         }
         else{
           console.log("hola_else")
-          proveedor.innerHTML += `<span class="infoPelisDetalles">La pelicula no tiene provedores en tu pais</span>`
+          proveedor.innerHTML += `<span class="infoPelisDetalles">¡Lo sentimos! La pelicula no tiene provedores en tu pais</span>`
 
         }
         }
         else{
           console.log("hola_else")
-          proveedor.innerHTML += `<span class="infoPelisDetalles">La pelicula no tiene provedores en tu pais</span>`
+          proveedor.innerHTML += `<span class="infoPelisDetalles">¡Lo sentimos! La pelicula no tiene provedores en tu pais</span>`
 
         }
         })

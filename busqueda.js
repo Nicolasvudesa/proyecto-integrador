@@ -4,8 +4,10 @@ window.addEventListener("load", function(){
     let query2 = new URLSearchParams(query1)//me convierte la cadena de texto a objeto literal
     let busqueda = query2.get("busqueda")
 
-    let resultado = this.document.querySelector(".resultados")
+    let resultado = document.querySelector(".resultados")
     resultado.innerHTML += `Resultados para: ${busqueda}`
+    let loader = document.querySelector(".giphy-embed")
+    loader.style.display = "none"
 
     fetch(`https://api.themoviedb.org/3/search/movie?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US&page=1&include_adult=false&query=${busqueda}`)
 	    .then(function(response){
