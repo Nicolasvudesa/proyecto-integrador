@@ -14,6 +14,7 @@ window.addEventListener("load", function(){
                     contenedor_lanzamientos.innerHTML += `<article class = "container">
                     <a href="./detalle-pelis.html?movie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].original_title}" class="foto-home"></a>
                     <p> ${ data.results[i].original_title} </p>
+                    <p>${data.results[i].release_date}</p>
                 </article>`
                 }
             }
@@ -37,6 +38,7 @@ window.addEventListener("load", function(){
                     contenedor_populares.innerHTML += `<article class="container">
                     <a href="./detalle-pelis.html?movie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].original_title}" class="foto-home"></a>
                     <p> ${ data.results[i].original_title} </p>
+                    <p>${data.results[i].release_date}</p>
                 </article>`
                 }
             }
@@ -60,6 +62,7 @@ window.addEventListener("load", function(){
                     contenedor_series.innerHTML += `<article class = "container">
                     <a href="./detalle-series.html?serie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].original_name}" class="foto-home"></a>
                     <p> ${ data.results[i].original_name} </p>
+                    <p>${data.results[i].first_air_date}</p>
                 </article>`
                 }
             }
