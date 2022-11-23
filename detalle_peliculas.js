@@ -1,11 +1,10 @@
 window.addEventListener("load", function () {
     let query1 = location.search;
     let query2 = new URLSearchParams(query1);
-    console.log(query2);
     let id = query2.get("movie_id");
 
-
-    console.log(id);
+    let loader = document.querySelector(".giphy-embed")
+    loader.style.display = "none"
     fetch(
       `https://api.themoviedb.org/3/movie/${id}?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US`
     )
@@ -29,14 +28,11 @@ window.addEventListener("load", function () {
               <a href="#recomendaciones"><p class="boton_favs boton_recomendaciones">Ver recomendaciones</p></a>
               <p class="boton_favs boton_favoritos">Agregar a favoritos</p>
               </article>`;
-        
-              //<p class="boton_favs borrar">Eliminar de favoritos</p>
-
               let contenedor_generos = document.querySelector(".generos_nombre");
         for (let i = 0; i < data.genres.length; i++) {
           let genre_id = data.genres[i].id;
           let genre_name = data.genres[i].name;
-          contenedor_generos.innerHTML += `<a href="./detalle-generos.html?genre_id=${genre_id}&genre_name=${genre_name}&type=pelicula"><span class="infoPelisDetalles">${genre_name}</span></a>`;
+          contenedor_generos.innerHTML += `<a class="nomb_gen" href="./detalle-generos.html?genre_id=${genre_id}&genre_name=${genre_name}&type=pelicula"><span class="infoPelisDetalles">${genre_name}</span></a>`;
         }
 
         let favoritos_boton = document.querySelector(".boton_favoritos")
@@ -48,13 +44,10 @@ window.addEventListener("load", function () {
         favoritos_boton.addEventListener("click", function(){
           let local_storage = localStorage.getItem("favorita")
           if (local_storage.includes(id)){
-            console.log("incluye")
             let favoritas_string = localStorage.getItem("favorita");
-            console.log(favoritas_string)
             let favoritas = favoritas_string.split(",");
               let array_nuevo_favoritas = [];
               for (let i = 0; i < favoritas.length; i++) {
-                console.log(data.id)
                 if (Number(favoritas[i]) !== data.id) {
                   array_nuevo_favoritas.push(favoritas[i]);
                 } else {
@@ -64,7 +57,6 @@ window.addEventListener("load", function () {
               favoritos_boton.innerText = "Agregar a favoritos"
           }
           else{
-            console.log("no incluye")
               let valueLocalStorage = localStorage.getItem("favorita");
               let newValue = id;
               let newLocalStorage = valueLocalStorage + "," + newValue;
@@ -84,7 +76,6 @@ window.addEventListener("load", function () {
           ".boton_recomendaciones"
         );
         container_recomendaciones.addEventListener("click", function () {
-          console.log("click");
           let mostrar = document.querySelector(".mostrar_recomendaciones");
           fetch(
             `https://api.themoviedb.org/3/movie/${id}/similar?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US&page=1`
@@ -98,7 +89,6 @@ window.addEventListener("load", function () {
                 let path = data.results[i].poster_path;
                 let id = data.results[i].id
                 let img = `https://image.tmdb.org/t/p/w500/${path}`;
-                let texto = 
                 mostrar.innerHTML += `<article class="container">
                 <a href="./detalle-pelis.html?movie_id=${id}"> <img src="${img}" alt="Foto${data.results[i].title}" class="foto-home"></a>
                 <p> ${data.results[i].title} </p>
@@ -123,20 +113,17 @@ window.addEventListener("load", function () {
           let keys_pais = Object.keys(data.results.US)
           if(keys_pais.includes("flatrate")){
             for(let i = 0; i < data.results.US.flatrate.length; i++){
-              console.log("hola") 
               let logo_path = data.results.US.flatrate[i].logo_path; 
               let img = `https://image.tmdb.org/t/p/w500/${logo_path}`
               proveedor.innerHTML +=  `<img class="logo_prov" src="${img}" alt='${data.results.US.flatrate[i].provider_name}'/>`
         }
           }
           else{
-            console.log("hola_else")
             proveedor.innerHTML += `<span class="infoPelisDetalles">¡Lo sentimos! La pelicula no tiene provedores en tu pais</span>`
 
           }
           }
           else{
-            console.log("hola_else")
             proveedor.innerHTML += `<span class="infoPelisDetalles">¡Lo sentimos! La pelicula no tiene provedores en tu pais</span>`
 
           }
@@ -147,17 +134,14 @@ window.addEventListener("load", function () {
   });
   let query1 = location.search;
   let query2 = new URLSearchParams(query1);
-  console.log(query2);
   let id = query2.get("movie_id");
 
   let urlVideo = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US`
-
   fetch(urlVideo)
     .then(function (response) {
       return response.json();
     })
     .then(function (datavideo) {
-console.log(datavideo);
 let trailer = datavideo.results;
     let contenedorTrailer = document.querySelector(".trailer");
       for (let i = 0; i < datavideo.results.length; i++) {

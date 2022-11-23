@@ -280,8 +280,16 @@ iframe{
     transition: 0.3s;
 }
 .generoseries a :hover{
+    transform: scale(1.2);
+}
+
+.nomb_gen{
+    transition: 0.3s;
+}
+.nomb_gen:hover{
     transform: scale(1.1);
 }
+
 .generospeliculas a{
     text-decoration: none;
     color: azure;

@@ -41,7 +41,6 @@ window.addEventListener("load", function(){
             let siguiente = document.querySelector(".siguiente")
             let nro_pagina = 1 
             siguiente.addEventListener("click", function(){
-                container.innerHTML = ""
                 nro_pagina += 1
                 fetch(`https://api.themoviedb.org/3/search/movie?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US&page=${nro_pagina}&include_adult=false&query=${busqueda}`)
                 .then(function(response){
@@ -53,6 +52,7 @@ window.addEventListener("load", function(){
                         resultadoBusqueda.innerText = `La búsqueda ${busqueda} no dio ningún resultado`
                     }
                     else{
+                        container.innerHTML = ""
                         for(let i = 0; i < 4; i ++){
                             let path = data.results[i].poster_path
                             let img = `https://image.tmdb.org/t/p/w500/${path}`
@@ -99,8 +99,6 @@ window.addEventListener("load", function(){
             let nro_pagina_serie = 1 
             let siguiente_serie = document.querySelector(".siguiente_serie")
             siguiente_serie.addEventListener("click", function(){
-                console.log("click")
-                container_series.innerHTML = ""
                 nro_pagina_serie += 1
                 fetch(`https://api.themoviedb.org/3/search/tv?api_key=2a3601e42fea0b8cec36fb4c1999c023&language=en-US&page=${nro_pagina_serie}&include_adult=false&query=${busqueda}`)
                 .then(function(response){
@@ -112,6 +110,7 @@ window.addEventListener("load", function(){
                         series.innerHTML = ""
                     }
                     else{
+                        container_series.innerHTML = ""
                         for(let i = 0; i < 4; i ++){
                             let path = data.results[i].poster_path
                             let img = `https://image.tmdb.org/t/p/w500/${path}`

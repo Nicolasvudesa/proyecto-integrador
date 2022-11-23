@@ -1,9 +1,8 @@
 window.addEventListener("load", function () {
   let favoritas_string = localStorage.getItem("favorita");
   let favoritas = favoritas_string.split(",");
-  console.log(favoritas_string)
   if(favoritas == "" ){
-    let titulo = document.querySelector(".titulo.favoritas")
+    let titulo = document.querySelector(".titulo_favoritos")
     titulo.innerText = "No tienes favoritas seleccionados"
   }
   for (let i = 0; i < favoritas.length; i++) {
@@ -32,7 +31,7 @@ window.addEventListener("load", function () {
 
   let favoritas_string_serie = localStorage.getItem("favoritas_series");
   let favoritas_serie = favoritas_string_serie.split(",");//["58", "89"]---->[58, 89]
-  console.log(favoritas_serie)
+
   for (let i = 0; i < favoritas_serie.length; i++) {
     let id_serie = Number(favoritas_serie[i]);
     fetch(
