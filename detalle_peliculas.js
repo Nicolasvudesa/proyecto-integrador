@@ -28,9 +28,10 @@ window.addEventListener("load", function () {
               <div class="proveedores"> <p>Donde mirar:</p></div>
               <a href="#recomendaciones"><p class="boton_favs boton_recomendaciones">Ver recomendaciones</p></a>
               <p class="boton_favs boton_favoritos">Agregar a favoritos</p>
-              <p class="boton_favs borrar">Eliminar de favoritos</p></article>`;
+              </article>`;
         
-        
+              //<p class="boton_favs borrar">Eliminar de favoritos</p>
+
               let contenedor_generos = document.querySelector(".generos_nombre");
         for (let i = 0; i < data.genres.length; i++) {
           let genre_id = data.genres[i].id;
@@ -38,33 +39,44 @@ window.addEventListener("load", function () {
           contenedor_generos.innerHTML += `<a href="./detalle-generos.html?genre_id=${genre_id}&genre_name=${genre_name}&type=pelicula"><span class="infoPelisDetalles">${genre_name}</span></a>`;
         }
 
-        let agregar_favorito = document.querySelector(".boton_favoritos");
-        console.log("Favoritos ", agregar_favorito);
-        agregar_favorito.addEventListener("click", function () {
-          let valueLocalStorage = localStorage.getItem("favorita");
-          let newValue = id;
-          let newLocalStorage = valueLocalStorage + "," + newValue;
-          if (valueLocalStorage !== null) {
-            localStorage.setItem("favorita", newLocalStorage);
-          } else {
-            localStorage.setItem("favorita", newValue);
+        let favoritos_boton = document.querySelector(".boton_favoritos")
+        let local_storage = localStorage.getItem("favorita")
+        if (local_storage.includes(id)){
+          favoritos_boton.innerText = "Eliminar de favoritos";
+        }
+
+        favoritos_boton.addEventListener("click", function(){
+          let local_storage = localStorage.getItem("favorita")
+          if (local_storage.includes(id)){
+            console.log("incluye")
+            let favoritas_string = localStorage.getItem("favorita");
+            console.log(favoritas_string)
+            let favoritas = favoritas_string.split(",");
+              let array_nuevo_favoritas = [];
+              for (let i = 0; i < favoritas.length; i++) {
+                console.log(data.id)
+                if (Number(favoritas[i]) !== data.id) {
+                  array_nuevo_favoritas.push(favoritas[i]);
+                } else {
+                }
+              }
+              localStorage.setItem("favorita", array_nuevo_favoritas.toString());
+              favoritos_boton.innerText = "Agregar a favoritos"
           }
-        });
-              let borrar_fav = document.querySelector(".borrar");
-        let favoritas_string = localStorage.getItem("favorita");
-        console.log(favoritas_string)
-        let favoritas = favoritas_string.split(",");
-        borrar_fav.addEventListener("click", function () {
-          let array_nuevo_favoritas = [];
-          for (let i = 0; i < favoritas.length; i++) {
-            console.log(data.id)
-            if (Number(favoritas[i]) !== data.id) {
-              array_nuevo_favoritas.push(favoritas[i]);
-            } else {
-            }
+          else{
+            console.log("no incluye")
+              let valueLocalStorage = localStorage.getItem("favorita");
+              let newValue = id;
+              let newLocalStorage = valueLocalStorage + "," + newValue;
+              if (valueLocalStorage !== null) {
+                localStorage.setItem("favorita", newLocalStorage);
+              } else {
+                localStorage.setItem("favorita", newValue);
+              } 
+              favoritos_boton.innerText = "Eliminar de favoritos"
+
           }
-          localStorage.setItem("favorita", array_nuevo_favoritas.toString());
-        });
+        })
 
       })
       .then(function (data) {

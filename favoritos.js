@@ -1,6 +1,11 @@
 window.addEventListener("load", function () {
   let favoritas_string = localStorage.getItem("favorita");
   let favoritas = favoritas_string.split(",");
+  console.log(favoritas_string)
+  if(favoritas == "" ){
+    let titulo = document.querySelector(".titulo.favoritas")
+    titulo.innerText = "No tienes favoritas seleccionados"
+  }
   for (let i = 0; i < favoritas.length; i++) {
     let id = Number(favoritas[i]);
     fetch(

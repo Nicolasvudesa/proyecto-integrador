@@ -16,9 +16,6 @@ body{
     align-items: center;
 }
 
-.container_favoritos{
-    display: flex;
-}
 .mostrar_recomendaciones{
     display: flex; 
 }
@@ -374,6 +371,13 @@ a{
     width: 4.5vw;
     border-radius: 2vh;
     padding: 0.25vw;
+}
+.cont_favs{
+    display: flex;
+    flex-direction: column;
+}
+.container_favoritos{
+    display: flex;
 }
 @media (max-width: 500px){
 
